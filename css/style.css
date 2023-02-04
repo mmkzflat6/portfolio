@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/** 共通 **/
+/** 共通スタイル **/
 html {
   scroll-behavior: smooth;
 }
@@ -71,6 +71,7 @@ li {
   list-style: none;
 }
 
+/** ここまで共通スタイル **/
 /** 共通アイテム **/
 .wrap {
   margin: 160px auto;
@@ -79,8 +80,8 @@ li {
 .sec-wrap {
   margin: 80px auto;
   visibility: hidden;
-  transition: all 0.5s;
   transform: translateY(100px);
+  transition: all 0.5s;
   opacity: 0;
 }
 
@@ -101,6 +102,7 @@ li {
   margin-bottom: 16px;
 }
 
+/** ここまで共通アイテム **/
 /** garage **/
 .garage {
   position: fixed;
@@ -143,6 +145,7 @@ li {
     opacity: 0;
   }
 }
+/** ここまでgarage **/
 /** container **/
 .container-contents {
   position: relative;
@@ -169,6 +172,7 @@ li {
     opacity: 1;
   }
 }
+/** ここまでcontainer **/
 /** header **/
 .header-bg {
   background-image: url(/img/hd-bgi.jpg);
@@ -200,7 +204,8 @@ li {
   padding-top: 22%;
 }
 
-/** nav **/
+/** ここまでheader **/
+/** gnav **/
 .gnav {
   display: flex;
   position: absolute;
@@ -218,6 +223,7 @@ li {
   padding-left: 40px;
 }
 
+/** ここまでgnav **/
 /** about **/
 .contents-box {
   display: flex;
@@ -235,6 +241,7 @@ li {
   text-align: justify;
 }
 
+/** ここまでabout **/
 /** skill **/
 .skill-box {
   display: flex;
@@ -269,6 +276,7 @@ li {
   text-align: justify;
 }
 
+/** ここまでskill **/
 /** works **/
 .works {
   width: 100%;
@@ -283,7 +291,7 @@ li {
 }
 
 .works-box {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -291,6 +299,7 @@ li {
   text-align: center;
 }
 
+/** ここまでworks **/
 /** モーダルの中身 **/
 .modal {
   display: none;
@@ -356,38 +365,6 @@ li {
   margin: 0 auto;
 }
 
-.mock {
-  text-align: center;
-  padding-top: 16px;
-  padding-bottom: 2rem;
-}
-.mock a img {
-  display: block;
-  margin: 1rem auto;
-  width: 90%;
-  box-shadow: 1px 1px 1px black;
-}
-.mock p {
-  text-align: center;
-}
-
-.mock-list {
-  padding-bottom: 40px;
-}
-
-.mock-item {
-  margin-bottom: 1rem;
-}
-
-.mock-item span {
-  display: inline-block;
-  font-weight: bold;
-}
-
-.mock-item p {
-  display: inline-block;
-}
-
 .modal-item {
   padding-bottom: 2rem;
 }
@@ -397,6 +374,23 @@ li {
 }
 .modal-item a {
   color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.mock {
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 2rem;
+}
+.mock a img {
+  display: block;
+  margin: 1rem auto;
+  width: 90%;
+  box-shadow: 1px 1px 1px #000;
+}
+.mock p {
+  text-align: center;
 }
 
 .close-icon {
@@ -408,6 +402,7 @@ li {
   color: #fff;
 }
 
+/** ここまでモーダルの中身 **/
 /** footer **/
 .footer {
   display: flex;
@@ -423,25 +418,29 @@ li {
   color: #fff;
 }
 
-/** レスポンシブ **/
+/** ここまでfooter **/
+/** ここからレスポンシブ **/
 /** 960px以下表示設定 **/
 @media screen and (max-width: 960px) {
+  /** トップへ戻るボタン **/
   .gotop {
     display: block;
     width: 40px;
     height: 40px;
     box-sizing: border-box;
-    background: #FFF;
-    border: 1px solid #999;
+    background: #fff;
+    border: 1px solid #333;
     border-radius: 4px;
     padding-top: 30px;
     text-align: center;
-    color: #333;
     opacity: 0.5;
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 15;
+  }
+  .gotop:hover {
+    opacity: 1;
   }
   .gotop::before {
     content: "";
@@ -457,37 +456,21 @@ li {
     position: absolute;
     transform: rotate(-45deg);
   }
-  .gotop:hover {
-    opacity: 1;
-  }
-  .header-logo {
-    font-size: 32px;
-  }
-  .gnav {
-    display: none;
-  }
+  /** ここまでトップへ戻るボタン **/
+  /** 共通アイテム **/
   .sec-ttl {
     font-size: 40px;
   }
   .content-ttl {
     font-size: 20px;
   }
-  .contents-box {
-    flex-wrap: wrap;
-    align-items: center;
+  /** header **/
+  .header-logo {
+    font-size: 32px;
   }
-  .skill-box {
-    display: block;
-  }
-  .skill-item {
-    width: 80%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .works p {
-    font-size: 12px;
-    text-align: center;
+  /** gnav **/
+  .gnav {
+    display: none;
   }
   /** ハンバーガーメニュー **/
   .hamburger-menu {
@@ -568,28 +551,52 @@ li {
   }
   .scroll-off {
     overflow: hidden;
-  } /** ここまでハンバーガーメニュー **/
+  }
+  /** ここまでハンバーガーメニュー **/
+  /** about **/
+  .contents-box {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  /** skill **/
+  .skill-box {
+    display: block;
+  }
+  .skill-item {
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  /** works **/
+  .work-item p {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 /** 520px以下表示設定 **/
 @media screen and (max-width: 520px) {
+  /** SP用背景 **/
   body::before {
     background-image: url(/img/bg-sp.jpg);
   }
-  .garage {
-    max-width: 520px;
-  }
-  .header-logo {
-    font-size: 24px;
-  }
-  .gnav {
-    display: none;
-  }
+  /** 共通アイテム **/
   .wrap {
     margin: 80px auto;
   }
-  .modal-body {
-    font-size: 10px;
+  /** garage **/
+  .garage {
+    max-width: 520px;
   }
+  /** header **/
+  .header-logo {
+    font-size: 24px;
+  }
+  /** gnav **/
+  .gnav {
+    display: none;
+  }
+  /** works **/
   .works-box {
     width: 80%;
     margin: 0 auto;
@@ -598,22 +605,30 @@ li {
     font-size: 10px;
     text-align: center;
   }
+  /** モーダル内 **/
+  .modal-body {
+    font-size: 10px;
+  }
+  /** footer **/
   .footer p {
     font-size: 8px;
   }
 }
 /** 961pxから表示設定 **/
 @media screen and (min-width: 961px) {
+  /** ハンバーガーメニュー **/
   .hm-container {
     display: none;
   }
+  /** works **/
   .works:hover {
-    box-shadow: 4px 6px 9px black;
+    box-shadow: 4px 6px 9px #000;
     transform: translate(0, -5px);
     transition: all 0.3s;
   }
+  /** モーダル内 **/
   .mock a img:hover {
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px #000;
     transform: translate(0, -3px);
     transition: all 0.3s;
   }
