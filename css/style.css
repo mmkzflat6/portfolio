@@ -136,11 +136,11 @@ li {
 }
 
 .header-logo {
-  top: 32%;
+  top: 34%;
   left: 5%;
   width: 100%;
   margin: 0 auto;
-  font-size: 56px;
+  font-size: 48px;
   font-weight: bold;
   color: #fff;
   position: fixed;
@@ -371,7 +371,7 @@ li {
   }
   .page-logo {
     text-align: center;
-    font-size: 40px;
+    font-size: 32px;
     padding: 0;
     top: 45%;
     left: 0;
