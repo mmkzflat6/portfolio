@@ -16,15 +16,34 @@
   <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="/css/ress.css">
   <link rel="stylesheet" href="/css/style.css">
-
 </head>
+
 <body>
   <!-- garage-bg -->
-  <div class="garage"></div><!-- /garage-bg -->
+  <div class="loading js-loading">
+    <div class="garage js-garage"></div>
+  </div><!-- /garage-bg -->
+
+  <!-- header -->
+  <header class="header js-mv">
+    <!-- header-logo -->
+    <div class="header-logo">
+      <h2>KAZUKI MAMIYA</h2>
+      <h3>PORTFOLIO</h3>
+    </div><!-- /header-logo -->
+  </header><!-- /header -->
+
+  <!-- navi -->
+  <nav class="gnav js-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#">ABOUT</a></li>
+      <li class="nav-item"><a href="works.html">WORKS</a></li>
+    </ul>
+  </nav><!-- /navi -->
 
   <!-- hamburger-menu -->
-  <div class="hm-container">
-    <button class="button">
+  <div class="hm-container js-hm">
+    <button class="hm-button">
       <div class="button-lineTop"></div>
       <div class="button-lineMedium"></div>
       <div class="button-lineBottom"></div>
@@ -32,9 +51,8 @@
     <div class="hamburger-menu">
       <div class="menu-header"></div>
       <ul class="menu-list">
-        <li class="menu-item"><a href="#about">ABOUT</a></li>
-        <li class="menu-item"><a href="#skill">SKILL</a></li>
-        <li class="menu-item"><a href="#works">WORKS</a></li>
+        <li class="menu-item"><a href="#">ABOUT</a></li>
+        <li class="menu-item"><a href="works.html">WORKS</a></li>
       </ul>
     </div>
   </div><!-- /hamburger-menu -->
@@ -46,31 +64,10 @@
       <!-- container-contents -->
       <div class="container-contents">
 
-        <!-- header -->
-        <header class="header">
-          <div class="header-bg"></div>
-          <!-- header-in -->
-          <div class="header-in">
-            <!-- navi -->
-            <nav class="gnav">
-              <ul class="nav-list">
-                <li class="nav-item"><a href="#about">ABOUT</a></li>
-                <li class="nav-item"><a href="#skill">SKILL</a></li>
-                <li class="nav-item"><a href="#works">WORKS</a></li>
-              </ul>
-            </nav><!-- /navi -->
-            <!-- header-logo -->
-            <div class="header-logo">
-              <h2>MY GARAGE</h2>
-              <h3>PORTFOLIO</h3>
-            </div><!-- /header-logo -->
-          </div><!-- /header-in -->
-        </header><!-- /header -->
-
         <!-- main -->
         <main class="main">
           <!-- about -->
-          <article id="about" class="wrap">
+          <article class="wrap">
             <h2 class="sec-ttl">ABOUT</h2>
             <!-- my profile -->
             <section class="sec-wrap">
@@ -109,7 +106,7 @@
           </article><!-- /about -->
 
           <!-- skill -->
-          <article id="skill" class="wrap">
+          <article class="wrap">
             <h2 class="sec-ttl">SKILL</h2>
             <!-- skill-list -->
               <ul class="skill-box">
@@ -128,7 +125,7 @@
                   </div>
                   <div class="skill-content">
                     <h3 class="content-ttl">JavaScript</h3>
-                    <p>JavaScriptの基礎学習と、よく見るUIパーツをjQueryは使用せずに実装しています。現在一番学習中の言語です。</p>
+                    <p>JavaScriptの基礎を学習し、よく見るUIの実装をしました。Reactなどのフレームワークを扱えるように現在も学習中の言語です。</p>
                   </div>
                 </li>
                 <li class="skill-item">
@@ -155,30 +152,11 @@
                   </div>
                   <div class="skill-content">
                     <h3 class="content-ttl">figma</h3>
-                    <p>少しだけ使用しました。このサイトのイメージをfigmaで作りコーディングしました。</p>
+                    <p>このサイト含め、デザインをfigmaで行いコーディングしました。</p>
                   </div>
                 </li>
               </ul>
           </article><!-- /skill -->
-
-          <!-- works -->
-          <article id="works" class="wrap">
-            <h2 class="sec-ttl">WORKS</h2>
-            <!-- work-list -->
-            <section class="sec-wrap">
-              <div class="works-box">
-                <ul class="work-list">
-                  <li class="work-item">
-                    <button type="reset" aria-label="works-button" class="works">
-                      <img src="/img/work1.jpg" alt="" role="presentation" />
-                    </button>
-                    <p>ポートフォリオサイト(このサイト)</p>
-                  </li>
-                </ul>
-              </div>
-            </section><!-- /work-list -->
-          </article><!-- /works -->
-
         </main><!-- /main -->
 
         <!-- footer -->
@@ -188,53 +166,6 @@
       </div><!-- /container-contents -->
     </div><!-- /container-bg -->
   </div><!-- /container -->
-
-  <!-- モーダルリスト -->
-  <ul class="modals">
-    <li>
-      <div class="modal">
-        <div class="modal-inner">
-          <div class="modal-content">
-            <span class="close-icon">×</span>
-            <div class="modal-body">
-              <div class="mock">
-                <a href="#"><img src="/img/work-mock1.jpg" alt="イメージ画像"></a>
-                <p>ポートフォリオサイト(このサイト)</p>
-              </div>
-              <ul class="modal-list">
-                <li class="modal-item">
-                  <span>担当部分</span>
-                  <p>企画/デザイン/コーディング</p>
-                </li>
-                <li class="modal-item">
-                  <span>制作時間</span>
-                  <p>１週間</p>
-                </li>
-                <li class="modal-item">
-                  <span>コンセプト</span>
-                  <p>
-                    車が好きなこともあり、ガレージをイメージして制作しています。特にこだわったところは、初期画面のシャッターが開くところです。
-                    極力ページ移動をなくし、１ページですべての情報が得られるようにしています。
-                    転職活動のため、私の簡単なプロフィール、実績、スキルを掲載しています。
-                  </p>
-                </li>
-                <li class="modal-item">
-                  <span>コメント</span>
-                  <p>
-                    私自身のポートフォリオwebサイトです。
-                    シンプルな最低限のアニメーションを使用しています。
-                    WORKSエリアの一覧は、モーダルウィンドウで表示にすることによりページ移動の手間を減らしました。
-                  </p>
-                </li>
-                <li class="modal-item">ソースコード：<a href="https://github.com/mmkzflat6/portfolio" target="_blank">github</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul><!-- /モーダルリスト -->
 
   <!-- トップへボタン -->
   <a href="#" class="gotop"></a><!-- トップへボタン -->
