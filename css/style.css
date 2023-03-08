@@ -255,7 +255,7 @@ li {
 }
 
 .skill-content {
-  padding-left: 16px;
+  width: 85%;
 }
 .skill-content p {
   text-align: justify;
