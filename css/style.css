@@ -364,7 +364,7 @@ li {
   /* header */
   .header-logo {
     text-align: center;
-    font-size: 40px;
+    font-size: 32px;
     padding: 0;
     top: 40%;
     left: 0;
@@ -544,7 +544,8 @@ li {
   }
   /* header */
   .header-logo {
-    font-size: 32px;
+    font-size: 24px;
+    top: 42%;
   }
   /* gnav */
   .gnav {
