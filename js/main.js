@@ -5,7 +5,7 @@ const sessionKey = "accesed";
 const sessionValue = true;
 
 if (!sessionStorage.getItem(sessionKey)) {
-  document.querySelector(".js-loading").classList.add(".loaded");
+  document.querySelector(".js-loading").classList.add("loaded");
 } else {
   window.onload = function() {
   const shutter = document.querySelector(".js-garage");
